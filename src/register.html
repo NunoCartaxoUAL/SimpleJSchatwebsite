@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<h2>Register Page</h2><br>
+<div class="register">
+    <form id="register" method="post" action="register.js">
+        <label>
+            <b>User Name</b>
+        </label>
+        <input type="text" name="uname" id="uname" placeholder="Username">
+
+        <br><br>
+
+        <label>
+            <b>Password</b>
+        </label>
+        <input type="Password" name="pass" id="upass" placeholder="Password">
+
+        <br><br>
+
+        <label>
+            <b>Date Of Birth</b>
+        </label>
+        <input type="date" name="dob" id="dob">
+
+        <br><br>
+
+        <label>
+            <b>Gender</b>
+        </label>
+        <br>
+        <label>Male:</label>
+        <input type="radio" name="gen" id="genmale">
+        <label>Female:</label>
+        <input type="radio" name="gen" id="genfemale">
+        <label>Other:</label>
+        <input type="radio" name="gen" id="genother">
+
+        <br><br>
+
+        <input type="button" name="reg" id="registerButton" value="register">
+        <br><br>
+    </form>
+</div>
+</body>
+</html>
