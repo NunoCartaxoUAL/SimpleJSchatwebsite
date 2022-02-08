@@ -3,30 +3,53 @@
 <head>
     <title>Login Form</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script rel="scripts/login.js" language="javascript" type="text/javascript"></script>
 </head>
 <body>
 <h2>Login Page</h2><br>
 <div class="login">
-    <form id="login" method="get" action="login.php">
+    <script language="JavaScript" type="text/javascript">
+        console.log("something1");
+        function test(){
+            const sqlite3 = require('sqlite3').verbose();
+
+            let db = new sqlite3.Database(':memory:', (err) => {
+                if (err) {
+                    return console.error(err.message);
+                }
+                console.log('Connected to the in-memory SQlite database.');
+            });
+            console.log("something");
+// close the database connection
+            db.close((err) => {
+                if (err) {
+                    return console.error(err.message);
+                }
+                console.log('Close the database connection.');
+            });
+        }
+
+    </script>
+    <form id="login">
         <label>
             <b>User Name</b>
         </label>
-        <input type="text" name="Uname" id="Uname" placeholder="Username">
+        <input type="text" name="uname" id="uname" placeholder="username">
 
         <br><br>
 
         <label>
             <b>Password</b>
         </label>
-        <input type="Password" name="Pass" id="Pass" placeholder="Password">
+        <input type="Password" name="pass" id="pass" placeholder="password">
 
         <br><br>
 
-        <input type="button" name="log" id="loginButton" value="Log In">
+        <input type="button" name="log" id="loginbutton" onclick="test()" value="Login">
         <br><br>
 
-        <a href="recovery.html">Forgot Password</a>
     </form>
+    <a href="recovery.html">Forgot Password</a>
 </div>
 </body>
 </html>
